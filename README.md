@@ -43,3 +43,13 @@ Now I build out AppLayout using Tailwind CSS.
 Then I move the Login : User Info & Logout logic from the index.js file and move it into the AppLayout.js file.
 
 While I'm in the index.js file, I cut and paste all the imports into the AppLayout.js file, along with useUser hook.
+
+Imported FontAwesome and further built out the AppLayout.js file.
+
+Now I create a Logo folder in the Components folder with an index.js and Logo.js file.
+
+Added the Google Fonts into the \_apps.js file. Added fonts to tailwind.config.js file.
+
+Built out the Homepage. Created CSS component in globals.css file and simplified code.
+
+(Note to Self: Start implementing GPT)
