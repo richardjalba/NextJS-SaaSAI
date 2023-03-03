@@ -53,3 +53,15 @@ Added the Google Fonts into the \_apps.js file. Added fonts to tailwind.config.j
 Built out the Homepage. Created CSS component in globals.css file and simplified code.
 
 (Note to Self: Start implementing GPT)
+
+I get an API key from platform.openai.com and put that key in the .env.local file.
+
+**OpenAI** such as ChatGPT, is an incredible AI technology that's single-handedly brought down my blog income streams, causing me to fully rejoin the workforce full-time as opposed to part-time freelance work (thanks ChatGPT!)
+
+Then I create an endpoint for that API in the pages/api folders with the name generatePost.js
+
+This is then implemented into the new.js file along with an onClick button.
+
+I got stuck with a 500 error and figured out that I gave the apiKey variable in generatePost.js the wrong value !!! Fixed.
+
+I implement OpenAI functionality in both generatePost.js and new.js
