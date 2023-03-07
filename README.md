@@ -65,3 +65,19 @@ This is then implemented into the new.js file along with an onClick button.
 I got stuck with a 500 error and figured out that I gave the apiKey variable in generatePost.js the wrong value !!! Fixed.
 
 I implement OpenAI functionality in both generatePost.js and new.js
+
+(Currently the OpenAI works and generates content based off of hard code in the backend. I want the user to provide the info in the frontend and I want better formatting for the generated content.)
+
+Now I'm going to refactor generatePost.js so that there can be arguments passed through it from the user.
+
+In new.js I add prompts and textareas for the user to insert information, along with setStates for the topic and keyword values.
+
+For a moment, typing in the textarea wasn't producing any characters. I realized I misnamed the onChange as onChanges !!! Fixed.
+
+The generatePost API endpoint will req JSON content from the topic and keyword states.
+
+Now the app will generate and produce content on the frontend based on user input.
+
+Next I want to be able to store all the generated content on the left side of the screen using MongoDB.
+
+**MongoDB** is a NoSQL database that utilizes JSON. Every "document" is given automatically given an \_id property.
