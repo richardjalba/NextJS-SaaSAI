@@ -81,3 +81,15 @@ Now the app will generate and produce content on the frontend based on user inpu
 Next I want to be able to store all the generated content on the left side of the screen using MongoDB.
 
 **MongoDB** is a NoSQL database that utilizes JSON. Every "document" is given automatically given an \_id property.
+
+On the MongoDB website, I create a Cluster with an OwlAI Database with a users Collection and posts Collection.
+
+Then I added the connection string from MongoDB to the .env.local file so that my application can connect with MongoDB.
+
+From here I start building out a new API endpoint for adding tokens in addTokens.js
+
+To test, whenever a user clicks the Add Credits button, if they aren't already in the MongoDB user Collection, they will be "upserted", otherwise they will receive 10 credits.
+
+Now I'm using the withApiAuthRequired function to protect the generatePost.js API by wrapping the entire thing.
+
+Built out generationPost.js to connect intimately with MongoDB user and posts Collections.
