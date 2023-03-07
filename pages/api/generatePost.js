@@ -62,7 +62,9 @@ The response must also include appropriate HTML title and meta description conte
     created: new Date(),
   });
 
+  console.log('POST: ', post);
+
   res.status(200).json({
-    post: JSON.parse(response.data.choices[0]?.text.split('\n').join('')),
+    postId: post.insertedId,
   });
 });

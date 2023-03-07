@@ -93,3 +93,5 @@ To test, whenever a user clicks the Add Credits button, if they aren't already i
 Now I'm using the withApiAuthRequired function to protect the generatePost.js API by wrapping the entire thing.
 
 Built out generationPost.js to connect intimately with MongoDB user and posts Collections.
+
+...
