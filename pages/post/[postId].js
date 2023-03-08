@@ -7,8 +7,31 @@ export default function Post(props) {
   console.log('PROPS: ', props);
 
   return (
-    <div>
-      <h1>This is Post Page</h1>
+    <div className='overflow-auto h-full'>
+      <div className='max-w-screen-sm mx-auto'>
+        <div className='text-sm font-bold mt-6 p-2 bg-stone-200 rounded-sm'>
+          SEO Title & Meta Description
+        </div>
+        <div className='p-4 my-2 border border-stone-200 rounded-md'>
+          <div className='text-blue-600 text-2xl font-bold'>{props.title}</div>
+          <div className='mt-2'>{props.metaDescription}</div>
+        </div>
+        <div className='text-sm font-bold mt-6 p-2 bg-stone-200 rounded-sm'>
+          Keywords
+        </div>
+        <div className='flex flex-wrap pt-2 gap-1'>
+          {props.keywords.split(',').map((keyword, i) => (
+            <div key={i} className='p-2 rounded-full bg-slate-800 text-white'>
+              {' '}
+              # {keyword}{' '}
+            </div>
+          ))}
+        </div>
+        <div className='text-sm font-bold mt-6 p-2 bg-stone-200 rounded-sm'>
+          Content
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: props.postContent || '' }} />
+      </div>
     </div>
   );
 }

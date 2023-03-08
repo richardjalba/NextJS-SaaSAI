@@ -95,3 +95,11 @@ Now I'm using the withApiAuthRequired function to protect the generatePost.js AP
 Built out generationPost.js to connect intimately with MongoDB user and posts Collections.
 
 ...
+
+Now it's time for the app to start rendering the post content that is generated on its proper post page.
+
+(Up until this point, the content has been generated on the frontend in a crass way, or I've been looking at it through chrome tools)
+
+Back in [postId].js I apply some Tailwind styling and give a place for the generated content to render. This involves modifying the global.css file.
+
+For a moment, the sidebar was stretching alongside the length of the content when it's meant to be a fixed viewport height. I go into the AppLayout.js file !!! Fixed.
