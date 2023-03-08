@@ -103,3 +103,7 @@ Now it's time for the app to start rendering the post content that is generated 
 Back in [postId].js I apply some Tailwind styling and give a place for the generated content to render. This involves modifying the global.css file.
 
 For a moment, the sidebar was stretching alongside the length of the content when it's meant to be a fixed viewport height. I go into the AppLayout.js file !!! Fixed.
+
+Now I want to list the generated content for the logged in user at the left side of the screen.
+
+I create a utils folder and a getAppProps.js file so I can prepare to query all the generated content onto the left side of the screen.
