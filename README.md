@@ -107,3 +107,17 @@ For a moment, the sidebar was stretching alongside the length of the content whe
 Now I want to list the generated content for the logged in user at the left side of the screen.
 
 I create a utils folder and a getAppProps.js file so I can prepare to query all the generated content onto the left side of the screen.
+
+...
+
+**Stripe** is a payment processing tool.
+
+Now I got to stripe.com to collect the necessary API keys to paste into my app's .env.local file
+
+Then I import stripe into the addTokens.js file along with any code to make Stripe function with my API keys.
+
+I build out the success.js page to redirect any users who make a purchase via Stripe.
+
+Now to ensure that people are actually purchasing their Credits, I need to download stripe onto my machine, create a folder called webhooks, and create a webhook endpoint in the stripe.js file.
+
+Moved logic from addTokens.js to stripe.js
