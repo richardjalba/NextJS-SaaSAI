@@ -121,3 +121,7 @@ I build out the success.js page to redirect any users who make a purchase via St
 Now to ensure that people are actually purchasing their Credits, I need to download stripe onto my machine, create a folder called webhooks, and create a webhook endpoint in the stripe.js file.
 
 Moved logic from addTokens.js to stripe.js
+
+...
+
+To prevent fontAwesome icons from glitching, I import fontawesome config so I can prevent any preemptive incorrect loading.
