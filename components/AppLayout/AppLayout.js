@@ -11,10 +11,10 @@ export const AppLayout = ({ children, availableTokens, posts, postId }) => {
   return (
     <div className='grid grid-cols-[300px_1fr] h-screen max-h-screen'>
       <div className='flex flex-col text-white overflow-hidden'>
-        <div className='bg-slate-800 px-2'>
+        <div className='bg-zinc-800 px-2'>
           <Logo />
           <Link href='/post/new' className='btn'>
-            GENERATE
+            CREATE NEW
           </Link>
           <Link href='/token-topup' className='block mt-2 text-center'>
             <FontAwesomeIcon icon={faCoins} className='text-yellow-500' />
@@ -22,7 +22,7 @@ export const AppLayout = ({ children, availableTokens, posts, postId }) => {
           </Link>
         </div>
 
-        <div className='px-4 flex-1 overflow-auto bg-gradient-to-b from-slate-800 to-blue-800'>
+        <div className='px-4 flex-1 overflow-auto bg-gradient-to-b from-zinc-800 to-stone-900'>
           {posts.map((post) => (
             <Link
               key={post._id}
@@ -36,7 +36,7 @@ export const AppLayout = ({ children, availableTokens, posts, postId }) => {
           ))}
         </div>
 
-        <div className='bg-blue-800 flex items-center gap-2 border-t border-t-black/50 h-20 px-2'>
+        <div className='bg-stone-900 flex items-center gap-2 border-t border-t-black/50 h-20 px-2'>
           {!!user ? (
             <>
               {' '}

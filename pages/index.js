@@ -10,8 +10,8 @@ export default function Home() {
       <div className='relative z-10 text-white px-10 py-5 text-center max-w-screen-sm bg-slate-900/90 rounded-md backdrop-blur-sm'>
         <Logo />
         <p>
-          The AI-powered SaaS solution to generate highly polished content in
-          minutes. Get high-quality work at rapid-fire speed.
+          The writer's solution to generate highly polished content in minutes.
+          Get high-quality work at rapid-fire speed.
         </p>
         <br />
         <Link href='/post/new' className='btn'>

@@ -125,3 +125,13 @@ Moved logic from addTokens.js to stripe.js
 ...
 
 To prevent fontAwesome icons from glitching, I import fontawesome config so I can prevent any preemptive incorrect loading.
+
+In new.js I add logic to allow for a animated loading screen.
+
+Added redirect to token-topup page when the user clicks the Generate button and has zero credits.
+
+Disabled Generate button if there is nothing populating the Topic or Keywords textareas (styles reflects this).
+
+Cursor changes if the Generate button is disabled.
+
+Character limits of 80 are given to textareas.
