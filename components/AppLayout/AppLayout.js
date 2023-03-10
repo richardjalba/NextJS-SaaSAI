@@ -38,12 +38,13 @@ export const AppLayout = ({
             CREATE NEW
           </Link>
           <Link href='/token-topup' className='block mt-2 text-center'>
-            <FontAwesomeIcon icon={faCoins} className='text-yellow-500' />
+            <FontAwesomeIcon icon={faCoins} className='text-yellow-500 mt-2' />
             <span className='pl-1'> {availableTokens} Credits Available </span>
           </Link>
         </div>
 
         <div className='px-4 flex-1 overflow-auto bg-gradient-to-b from-zinc-800 to-stone-900'>
+          <div className='mt-3' />
           {posts.map((post) => (
             <Link
               key={post._id}

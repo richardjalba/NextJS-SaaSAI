@@ -11,11 +11,23 @@ export default function TokenTopup() {
   };
 
   return (
-    <div>
-      <h1>This is Token Topup</h1>
-      <button className='btn' onClick={handleClick}>
-        Add Credits
-      </button>
+    <div className='overflow-auto divh-full'>
+      <div className='max-w-screen-sm mx-auto'>
+        <br />
+        <h1 className='text-center'>You're out of Credits!</h1>
+        <br />
+        <p className='text-lg'>wqerqwerqwerweqrqwereqwreqwrweqr</p>
+        <br />
+        <button
+          className='btn bg-orange-600 hover:bg-stone-700'
+          onClick={handleClick}
+        >
+          Add Credits
+        </button>
+        <p className='text-sm text-center text-slate-400'>
+          All purchases are Non-Refundable.
+        </p>
+      </div>
     </div>
   );
 }

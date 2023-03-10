@@ -1,14 +1,37 @@
 import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { ObjectId } from 'mongodb';
+import { useRouter } from 'next/router';
+import { useContext, useState } from 'react';
 import { AppLayout } from '../../components/AppLayout';
+import PostsContext from '../../context/postsContext';
 import clientPromise from '../../lib/mongodb';
 import { getAppProps } from '../../utils/getAppProps';
 
 export default function Post(props) {
   console.log('PROPS: ', props);
+  const router = useRouter();
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const { deletePost } = useContext(PostsContext);
+
+  const handleDeleteConfirm = async () => {
+    try {
+      const response = await fetch(`/api/deletePost`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({ postId: props.id }),
+      });
+      const json = await response.json();
+      if (json.success) {
+        deletePost(props.id);
+        router.replace(`/post/new`);
+      }
+    } catch (e) {}
+  };
 
   return (
-    <div className='overflow-auto h-full'>
+    <div className='overflow-auto divh-full'>
       <div className='max-w-screen-sm mx-auto'>
         <div className='text-sm font-bold mt-6 p-2 bg-stone-200 rounded-sm'>
           SEO Title & Meta Description
@@ -32,6 +55,41 @@ export default function Post(props) {
           Content
         </div>
         <div dangerouslySetInnerHTML={{ __html: props.postContent || '' }} />
+
+        <div className='my-4'>
+          {!showDeleteConfirm && (
+            <button
+              className='btn bg-stone-800 hover:bg-stone-700'
+              onClick={() => setShowDeleteConfirm(true)}
+            >
+              DELETE
+            </button>
+          )}
+          {!!showDeleteConfirm && (
+            <div>
+              <p className='p-2 bg-stone-300 text-center'>
+                Are you sure? Delete can't be undone.
+              </p>
+              <div className='grid grid-cols-2 gap-2'>
+                <button
+                  onClick={() => setShowDeleteConfirm(false)}
+                  className='btn bg-stone-600 hover:bg-stone-700'
+                >
+                  CANCEL
+                </button>
+                <button
+                  onClick={handleDeleteConfirm}
+                  className='btn bg-red-800 hover:bg-red-900'
+                >
+                  CONFIRM DELETE
+                </button>
+              </div>
+            </div>
+          )}
+          <br />
+          <br />
+          <br />
+        </div>
       </div>
     </div>
   );
