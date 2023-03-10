@@ -4,9 +4,22 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { Logo } from '../Logo/Logo';
+import { useContext, useEffect } from 'react';
+import PostsContext from '../../context/postsContext';
 
-export const AppLayout = ({ children, availableTokens, posts, postId }) => {
+export const AppLayout = ({
+  children,
+  availableTokens,
+  posts: postsFromSSR,
+  postId,
+}) => {
   const { user } = useUser();
+
+  const { setPostsFromSSR, posts, getPosts } = useContext(PostsContext);
+
+  useEffect(() => {
+    setPostsFromSSR(postsFromSSR);
+  }, [postsFromSSR, setPostsFromSSR]);
 
   return (
     <div className='grid grid-cols-[300px_1fr] h-screen max-h-screen'>
@@ -34,6 +47,14 @@ export const AppLayout = ({ children, availableTokens, posts, postId }) => {
               {post.topic}
             </Link>
           ))}
+          <div
+            onClick={() => {
+              getPosts({ lastPostDate: posts[posts.length - 1].created });
+            }}
+            className='hover:underline text-sm text-slate-400 text-center cursor-pointer mt-4'
+          >
+            -Show More-
+          </div>
         </div>
 
         <div className='bg-stone-900 flex items-center gap-2 border-t border-t-black/50 h-20 px-2'>

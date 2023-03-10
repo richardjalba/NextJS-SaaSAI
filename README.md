@@ -135,3 +135,9 @@ Disabled Generate button if there is nothing populating the Topic or Keywords te
 Cursor changes if the Generate button is disabled.
 
 Character limits of 80 are given to textareas.
+
+...
+
+Created postsContext.js and getPosts.js API endpoint for View More btn link to function.
+
+...
