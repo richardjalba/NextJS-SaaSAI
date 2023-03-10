@@ -141,3 +141,11 @@ Character limits of 80 are given to textareas.
 Created postsContext.js and getPosts.js API endpoint for View More btn link to function.
 
 ...
+
+Now when there is no more posts available to load, the Show More button disappears.
+
+...
+
+Added deletePost.js functionality.
+
+...
