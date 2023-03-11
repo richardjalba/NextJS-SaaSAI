@@ -5,7 +5,15 @@ import { getAppProps } from '../utils/getAppProps';
 export default function Success() {
   return (
     <div>
-      <h1>Thank you for your purchase!</h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1 className='text-center'>Thank you for your purchase!</h1>
+      <br />
+      <p className='text-center text-lg'>
+        Click the Create New button to get started!{' '}
+      </p>
     </div>
   );
 }

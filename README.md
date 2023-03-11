@@ -150,8 +150,12 @@ Added deletePost.js functionality.
 
 ...
 
-Added deletePost UI. Building out token-topup page. Polish
+Added deletePost UI. Building out token-topup page. Polish.
 
 ...
 
 FIN
+
+---
+
+Note to Self: Use new Stripe API keys

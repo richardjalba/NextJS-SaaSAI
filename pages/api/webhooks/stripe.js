@@ -13,7 +13,7 @@ export const config = {
   },
 };
 
-const stripe = stripeInit(process.env.STRIPE_SECRET_KEU);
+const stripe = stripeInit(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 const handler = async (req, res) => {
@@ -36,6 +36,8 @@ const handler = async (req, res) => {
 
         const paymentIntent = event.data.object;
         const auth0Id = paymentIntent.metadata.sub;
+
+        console.log('AUTH 0 ID: ', paymentIntent);
 
         const userProfile = await db.collection('users').updateOne(
           {
