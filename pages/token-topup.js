@@ -22,7 +22,8 @@ export default function TokenTopup() {
           <p className='p-4 bg-blue-100 rounded-md'>
             <span className='font-bold'> What is Owl AI?</span> Owl AI is a
             fantastic tool for content creators and aspiring writers who are
-            looking to generate polished content in a 'ready to go' format!
+            looking to generate polished content in a &#39;ready to go&#39;
+            format!
           </p>
 
           <p className='p-4 bg-yellow-100 rounded-md'>

@@ -68,7 +68,7 @@ export default function Post(props) {
           {!!showDeleteConfirm && (
             <div>
               <p className='p-2 bg-stone-300 text-center'>
-                Are you sure? Delete can't be undone.
+                Are you sure? Delete can&#39;t be undone.
               </p>
               <div className='grid grid-cols-2 gap-2'>
                 <button
