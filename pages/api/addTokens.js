@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   ];
 
   const protocol =
-    process.env.NODE_ENV === 'development' ? 'http://' : 'https//';
+    process.env.NODE_ENV === 'development' ? 'http://' : 'https://';
 
   const host = req.headers.host;
 
