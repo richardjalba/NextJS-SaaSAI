@@ -42,6 +42,13 @@ export default function TokenTopup() {
         </div>
 
         <br />
+        <a href='https://writersoftoday.com/how-to-use-owl-ai/'>
+          <button className='btn bg-blue-600 hover:bg-stone-700'>
+            FREE Guide
+          </button>
+        </a>
+
+        <br />
         <button
           className='btn bg-orange-600 hover:bg-stone-700'
           onClick={handleClick}
